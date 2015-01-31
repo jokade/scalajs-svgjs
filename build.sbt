@@ -32,7 +32,9 @@ lazy val tests = project.
   settings(
     publish := {},
     scalaJSStage := FastOptStage,
-    jsDependencies += RuntimeDOM
+    libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.7.0",
+    jsDependencies += RuntimeDOM,
+    jsDependencies += ProvidedJS / "svg.js"
   )
 
 
